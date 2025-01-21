@@ -5,9 +5,12 @@ on:
     branches:
     - main
 
+env:
+  NAME: "User-1"  
+
 jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
     - name: Print MSG
-      run: echo "HeLLo"
+      run: echo "HeLLo ${NAME}"
