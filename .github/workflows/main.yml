@@ -11,9 +11,12 @@ env:
 
 jobs:
   test-job:
+    env:
+      STAGE: "dev"
     runs-on: ubuntu-latest
     steps:
     - name: Print MSG
       run: |
         echo "HeLLo ${NAME}"
         echo "Region - ${{env.REGION}}"
+        echo "Stage - ${{env.STAGE}}"
