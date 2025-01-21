@@ -16,7 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print MSG
+      env:
+        APP_VERSION: "v-1"
       run: |
         echo "HeLLo ${NAME}"
         echo "Region - ${{env.REGION}}"
         echo "Stage - ${{env.STAGE}}"
+        echo "AppVersion - ${{env.APP_VERSION}}"
+        
